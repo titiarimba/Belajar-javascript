@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kalkulator dengan Javascript</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    </head>
+    <body>
+        <div class="kalkulator">
+            <div class="inputan">
+                <h1> Kalkulator Sederhana Javascript</h1>
+                <input type="text" name="angkapertama" placeholder="Angka Pertama" id="angkapertama">
+                <p>+</p>
+                <input type="text" name="angkakedua" placeholder="Angka Kedua" id="angkakedua">
+                <button id="hasil">=</button>
+
+                <h2 id="hsl"></h2>
+            </div>
+        </div>
+        
+        
+        <script>
+        	var c = document.getElementById('hasil');
+            c.addEventListener('click', tambah, false);
+
+            function tambah() {
+                var a = document.getElementById('angkapertama').value;
+                var b = document.getElementById('angkakedua').value;
+                var sum = parseFloat(a) + parseFloat(b);
+                document.getElementById("hsl").innerHTML = sum;
+            }
+        </script>
+    </body>
+</html>
